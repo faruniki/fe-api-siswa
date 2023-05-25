@@ -2,6 +2,7 @@
 <html>
 <body>
 
+
 @foreach ($siswas as $siswa)
 <ol>
     <li>NIS : {{$siswa['nis']}}</li>
