@@ -14,4 +14,10 @@ class SiswaController extends Controller
 
         return view('index')->with(['siswas' => $siswas['data']]);
     }
+
+    public function create()
+    {
+        return view('create');
+
+    }
 }
