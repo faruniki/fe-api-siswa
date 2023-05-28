@@ -7,14 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <label for="">NIS</label>
-        <input type="text">
-        <label for="">Nama</label>
-        <input type="text">
-        <label for="">Rombel</label>
-        <input type="text" name="" id="">
-        <button>Submit</button>
+ 
+    <form action="/siswa/create" method="post">
+        @csrf
+        <label for="nis">NIS</label>
+        <input type="text" name="nis">
+        <label for="nama">Nama</label>
+        <input type="text" name="nama">
+        <label for="rombel">Rombel</label>
+        <input type="text" name="rombel" name="" id="">
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

@@ -20,4 +20,22 @@ class SiswaController extends Controller
         return view('create');
 
     }
+
+    public function store(Request $request)
+    {
+        $payload = [
+            'nis' => $request->nis,
+            'nama' => $request->nama,
+            'rombel' => $request->rombel,
+        ];
+
+        $baseApi = new BaseApi;
+        $response = $baseApi->create('/api/siswa/create',$payload);
+            if ($response->failed()) {
+                $errors = $response->json('data');
+                return redirect()->back()->with(['errors']);
+            }
+        
+        return redirect('/')->with('success', 'Success add new Students to API!');
+    }
 }
